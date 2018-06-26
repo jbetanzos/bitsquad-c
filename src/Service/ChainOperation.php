@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Service;
 
 use App\Exception\NotMultiple;
 
@@ -8,7 +8,7 @@ class ChainOperation
 {
     private $number;
 
-    public function __construct($number)
+    public function setNumber($number)
     {
         $this->number = $number;
     }

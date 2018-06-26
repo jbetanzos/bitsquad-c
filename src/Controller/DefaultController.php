@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-use App\Model\ChainOperation;
 use App\Model\Multiple;
+use App\Service\ChainOperation;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends AbstractController
 {
-    public function index()
+    public function index(ChainOperation $chain)
     {
         $multiples = new \SplQueue();
         $multiples->enqueue(new Multiple(3, "Multipli"));
@@ -17,7 +17,7 @@ class DefaultController extends AbstractController
         $response = array();
 
         for ($i = 1; $i < 101; $i++) {
-            $chain = new ChainOperation($i);
+            $chain->setNumber($i);
             $response[] = array(
                 "number" => $i,
                 "toString" => $chain->validate($multiples, "Multiplianos")
