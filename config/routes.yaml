@@ -1,3 +1,3 @@
 index:
-    path: /
+    path: /{start}/{end}
     controller: App\Controller\DefaultController::index
