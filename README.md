@@ -37,6 +37,11 @@ Verify the application by navigating to your server address in your preferred br
 http://127.0.0.1:8000/1/101
 ```
 
+In order to check the Unit Testing and coverage report you can run the following command 
+```sh
+$ ./bin/phpunit --coverage-html ./tests/Report
+```
+
 Output sample
 ```sh
 [
@@ -74,4 +79,11 @@ Output sample
     .
     .
 ]
+```
+
+### Heroku Server
+You can check the implementation in a Heroku (free) app in the following link
+
+```sh
+https://app-bitsquad-c.herokuapp.com/1/101
 ```
