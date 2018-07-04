@@ -19,10 +19,12 @@ class Multiple
 
     public function toString($number)
     {
-        try {
-            return $this->string[$number%$this->multiple];
-        } catch (\Exception $exception) {
+        $index = $number%$this->multiple;
+
+        if (!isset($this->string[$index])) {
             throw new NotMultiple();
         }
+
+        return $this->string[$index];
     }
 }
