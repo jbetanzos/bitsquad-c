@@ -1,4 +1,4 @@
-# bitsquad
+# bitesquad
 
 ### Installation
 
